@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Department of Mathematical Sciences</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+  <header>
+    <h1>Department of Mathematical Sciences</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#tools">Math Tools</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="about">
+      <h2>About Us</h2>
+      <p>Welcome to the Department of Mathematical Sciences! Explore modern
+         mathematics, statistics, and computation through interactive tools and research.</p>
+    </section>
+
+    <section id="tools">
+      <h2>Mathematical Tools</h2>
+
+      <div class="tool">
+        <h3>Quadratic Equation Solver</h3>
+        <form id="quad-form">
+          <label>a: <input type="number" name="a" value="1"></label>
+          <label>b: <input type="number" name="b" value="-3"></label>
+          <label>c: <input type="number" name="c" value="2"></label>
+          <button type="submit">Solve</button>
+        </form>
+        <pre id="quad-result"></pre>
+      </div>
+
+      <div class="tool">
+        <h3>Derivative Calculator</h3>
+        <form id="deriv-form">
+          <label>Expression: <input name="expr" value="sin(x) + x**2"></label>
+          <label>Variable: <input name="variable" value="x"></label>
+          <button type="submit">Differentiate</button>
+        </form>
+        <pre id="deriv-result"></pre>
+      </div>
+
+      <div id="plot" style="height:400px;"></div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:mathdept@example.edu">mathdept@example.edu</a></p>
+    </section>
+  </main>
+
+  <footer>© 2025 Department of Mathematical Sciences</footer>
+  <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
